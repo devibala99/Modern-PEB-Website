@@ -28,11 +28,9 @@ const HomeProjectSection = () => {
     const length = slides.length;
 
     const nextSlide = () => {
-        console.log("prev");
         setCurrent(current === length - 1 ? 0 : current + 1);
     }
     const prevSlide = () => {
-        console.log("next")
         setCurrent(current === length - 1 ? 0 : current - 1);
     }
     if (!Array.isArray(slides) || slides.length <= 0) {

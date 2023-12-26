@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { useAnimation } from "framer-motion";
 import "../App.css"
-import nobg from "../images/logo1.png"
 import bgVideo from '../images/nightview.mp4'
-import Sidebar from "../components/Sidebar";
+import Header from "./Header"
 import TestimonialSlider from "./TestimonialSlider";
 import HomeAbout from "./HomeAbout";
 import { motion } from 'framer-motion'
 import HomePictureSection from "./HomePictureSection";
-// import WorkHome from "./WorkHome";
+import WorkHome from "./WorkHome";
 import HomeProjectSection from "./HomeProjectSection";
 import HomeContact from "./HomeContact";
 
@@ -63,9 +62,7 @@ const Home = () => {
             <video autoPlay loop muted preload="true" src={bgVideo} >
                 <source src={bgVideo} type="video/mp4" />
             </video>
-            <div className="image-logo">
-                <img src={nobg} alt="logo" />
-            </div>
+            <Header />
             <div className="text-wrapper">
                 <h1>
                     <span >Upgraded Smart Solutions</span>
@@ -73,9 +70,7 @@ const Home = () => {
                     Pre Engineered<br />Buildings
                 </h1>
             </div>
-            <div className="menubar">
-                <Sidebar />
-            </div>
+
             <TestimonialSlider />
 
             <motion.div animate={controls} style={{ opacity: 0, y: -200 }}>
@@ -90,6 +85,9 @@ const Home = () => {
                 <HomeProjectSection />
             </motion.div>
 
+            <div>
+                <WorkHome />
+            </div>
 
             <HomeContact />
 
@@ -98,4 +96,3 @@ const Home = () => {
 }
 export default Home;
 
-/** <WorkHome /> */
